@@ -82,11 +82,12 @@ public class Sabot implements Iterable<Carte>{
 	}
 	
 	public Carte piocher() {
-		Iterator iterateur = iterator();
+		Iterator<Carte> iterateur = iterator();
 		Carte carte = iterateur.next();
+		iterateur.remove();
 		
 		
-		return null;
+		return carte;
 	}
 
 }

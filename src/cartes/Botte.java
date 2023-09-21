@@ -10,13 +10,13 @@ public class Botte extends Probleme {
 	public String toString() {
 		switch (super.getType()) {
 		case FEU:
-			return "VéhiculePrioritaire";
+			return "Véhicule Prioritaire";
 		case ESSENCE:
-			return "CiterneEssence";
+			return "Citerne D'Essence";
 		case CREVAISON:
 			return "Increvable";
 		default:
-			return "AsDuVolant";
+			return "As Du Volant";
 		}
 	}
 

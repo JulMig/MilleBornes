@@ -15,13 +15,13 @@ public class Attaque extends Bataille {
 			name = "FeuRouge";
 			break;
 		case ESSENCE:
-			name = "PanneEssence";
+			name = "Panne D'Essence";
 			break;
 		case CREVAISON:
 			name = "Creuvaison";
 			break;
 		default:
-			name = "ACCIDENT";
+			name = "Accident";
 			break;
 		}
 		
