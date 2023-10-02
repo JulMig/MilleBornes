@@ -19,5 +19,15 @@ public class Botte extends Probleme {
 			return "As Du Volant";
 		}
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Botte) {
+			Botte b = (Botte) obj;
+			return super.equals(b);
+		} else {
+			return false;
+		}
+	}
 
 }

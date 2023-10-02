@@ -28,5 +28,15 @@ public class Attaque extends Bataille {
 	return name;
 		
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Attaque) {
+			Attaque atq = (Attaque) obj;
+			return super.equals(atq);
+		} else {
+			return false;
+		}
+	}
 
 }

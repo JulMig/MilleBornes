@@ -10,4 +10,9 @@ public class FinLimite extends Limite {
 	public String toString() {
 		return "FinDeLimite";	
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		return obj instanceof FinLimite;
+	}
 }

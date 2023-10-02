@@ -21,4 +21,14 @@ public class Parade extends Bataille {
 			return "Réparation";
 		}
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Parade) {
+			Parade p = (Parade) obj;
+			return super.equals(p);
+		} else {
+			return false;
+		}
+	}
 }
