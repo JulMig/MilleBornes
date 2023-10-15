@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 import cartes.Probleme.Type;
+import utils.Utils;
 
 public class JeuDeCartes {
 	
@@ -30,7 +31,7 @@ public class JeuDeCartes {
 			new Borne(4, 200)
 			
 	};
-	private List<Carte> listeCartes = new ArrayList<Carte>();
+	private List<Carte> listeCartes = new ArrayList<>();
 
 	public JeuDeCartes() {
 		
@@ -39,6 +40,12 @@ public class JeuDeCartes {
 				listeCartes.add(carte);
 			}
 		}
+		
+		List<Carte> listeCartesTemp = new ArrayList<>();
+		listeCartesTemp.addAll(listeCartes);
+		listeCartes = Utils.melanger(listeCartes);
+		
+		assert(Utils.verifierMelange(listeCartes, listeCartesTemp));
 	}
 	
 	public List<Carte> getListeCartes() {
@@ -49,7 +56,7 @@ public class JeuDeCartes {
 		for (Carte carte : typesDeCartes) {
 			int count = 0;
 			
-			for(ListIterator li = listeCartes.listIterator(); li.hasNext();) {
+			for(ListIterator<Carte> li = listeCartes.listIterator(); li.hasNext();) {
 				Object c = li.next();
 				if (carte.equals(c)) {
 					count ++;
